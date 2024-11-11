@@ -1,0 +1,188 @@
+.contenedornav {
+  border: 0px solid red;
+  height: 150px;
+}
+.coluno {
+  border: 0px solid blue;
+  margin-right: 5px;
+}
+.coldos {
+  border: 0px solid blue;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.coltres {
+  border: 0px solid blue;
+  margin-left: 5px;
+}
+#inputbuscador {
+  width: 120px;
+  height: 30px;
+  margin-left: 5px;
+}
+#lupa {
+  color: solid #000000;
+  height: 25px;
+}
+.lupaboton {
+  border: none;
+}
+#suscribete {
+  border-radius: 5px;
+  font-size: 13px;
+  padding: 7px 25px;
+}
+.bienvenida {
+  width: 200px;
+  font-size: 13px;
+  border: 2px solid rgb(68, 68, 68);
+  padding: 7px 17px 7px 17px;
+  border-radius: 10px;
+}
+#menu {
+  width: 10px;
+  font-size: 31px;
+  margin-right: 20px;
+}
+#cajamain {
+  margin-top: 20px;
+  border: 0px solid red;
+  height: 500px;
+}
+.fila {
+  border: 0px solid blue;
+  height: 200px;
+  margin: 5px 0px 10px 0px;
+  content: "";
+  top: 1;
+  right: 0;
+  border-bottom: 1px solid rgb(92, 92, 233);
+  box-sizing: border-box;
+}
+.filaDos {
+  border: 0px solid blue;
+  height: 410px;
+  margin: 5px 0px 10px 0px;
+  padding-top: 0px;
+}
+
+.columna-3-filaUno {
+  border: 0px solid blue;
+  margin: 5px 0px 20px 0px;
+  padding-bottom: 5px;
+  content: "";
+  top: 1;
+  right: 0;
+  border-bottom: 1px solid rgb(92, 92, 233);
+  box-sizing: border-box;
+}
+.-filaDos {
+  border: 0px solid blue;
+  margin: 5px 0px 10px 0px;
+  padding-bottom: 5px;
+  content: "";
+  top: 1;
+  right: 0;
+  border-bottom: 1px solid rgb(92, 92, 233);
+  box-sizing: border-box;
+}
+.columna-3-filaTres {
+  border: 0px solid blue;
+  margin: 5px 0px 0px 0px;
+  padding-bottom: 5px;
+}
+.filadoscentro {
+  border: 0px solid blue;
+  height: 250px;
+  margin: 5px 0px 10px 0px;
+}
+.divsubmarino {
+  background: url(../images/submarino-07.jpg);
+  background-size: cover;
+  background-position: center;
+}
+h2 {
+  font-family: "Univers LT Std", sans-serif, bold;
+  font-weight: 700;
+  line-height: 1.05;
+  text-align: left;
+}
+.textocorrido {
+  margin-top: 0px;
+  margin-bottom: 15px;
+
+  font-family: "Univers LT Std", sans-serif;
+  font-size: 14px;
+  text-align: left;
+  line-height: 1.2;
+}
+.nombreEscritor {
+  font-family: "Univers LT Std", sans-serif;
+  font-size: 12px;
+  text-align: left;
+  line-height: 1.2;
+}
+.paisEscritor {
+  font-family: "Univers LT Std", sans-serif;
+  font-size: 12px;
+  text-align: left;
+  line-height: 1.2;
+  color: #696969;
+}
+#barraSecciones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.secciones {
+  margin: 20px;
+  font-family: "Univers LT Std", sans-serif;
+  font-size: 13px;
+}
+.nombre-pais {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+.titulo-principal {
+  margin-top: 21px;
+}
+.titulo-noticia-6 {
+  margin-top: 19px;
+}
+#columna-3 {
+  content: "";
+  top: 1;
+  right: 0;
+  height: 678px;
+  border-left: 1px solid rgb(92, 92, 233);
+  box-sizing: border-box;
+}
+#columna-1 {
+  content: "";
+  top: 1;
+  right: 0;
+  height: 82%;
+  border-right: 1px solid rgb(92, 92, 233);
+  box-sizing: border-box;
+}
+#seccion-principales {
+  padding-top: 30px;
+  content: "";
+  top: 1;
+  right: 0;
+  height: 668px;
+  border-bottom: 1px solid rgb(92, 92, 233);
+  box-sizing: border-box;
+}
+/*-------------------------------------------------------------*/
+#boton-idioma,
+li {
+  border-radius: 5px;
+  font-size: 13px;
+  padding: 7px 20px;
+}
+#item-banner {
+  margin: 5px;
+  padding: 0;
+}
