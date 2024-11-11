@@ -1,0 +1,324 @@
+/*------------------- Selector Universal ---------------------*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Univers LT Std", sans-serif;
+}
+
+th {
+  border: 1px solid black;
+}
+/*------------------- Bloque Más Leídas ---------------------*/
+.grid1-container {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  font-family: "Univers LT Std", sans-serif;
+}
+.grid1-subcontainer {
+  height: 270px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.459);
+}
+.h3-text {
+  background-color: black;
+  color: whitesmoke;
+  padding: 10px 17px 10px 17px;
+  border-radius: 7px;
+  font-weight: bolder;
+}
+.james,
+.paises,
+.apps,
+.nueva {
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+.james-subcontainer::before,
+.paises-subcontainer::before,
+.apps-subcontainer::before {
+  content: "";
+  position: absolute;
+  top: 1;
+  right: 0;
+  height: 108%;
+  border-left: 1px solid rgba(128, 128, 128, 0.459);
+  box-sizing: border-box;
+}
+.james-subcontainer,
+.paises-subcontainer,
+.apps-subcontainer,
+.nueva-subcontainer {
+  width: 100%;
+  height: 70%;
+}
+.james-img,
+.paises-img,
+.apps-img,
+.nueva-img {
+  display: flex;
+  justify-content: center;
+  padding: 1px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: 2px solid rgb(28, 31, 28);
+}
+.james-sub-img,
+.apps-sub-img,
+.paises-sub-img,
+.nueva-sub-img {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.james-img-container,
+.paises-img-container,
+.apps-img-container,
+.nueva-img-container {
+  width: 100%;
+  height: auto;
+}
+.james-subtittle-container,
+.james-subdescription-container,
+.paises-subtittle-container,
+.paises-subdescription-container,
+.apps-subtittle-container,
+.apps-subdescription-container,
+.nueva-subtittle-container,
+.nueva-subdescription-container {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+.number {
+  font-size: 15px;
+  position: absolute;
+  top: -5px;
+  left: -3px;
+  background-color: black;
+  padding: 0px 10px 0px 10px;
+  color: whitesmoke;
+  border-radius: 7px;
+  font-weight: bolder;
+}
+.james-tittle-container,
+.paises-tittle-container,
+.apps-tittle-container,
+.nueva-tittle-container {
+  height: 17%;
+  font-weight: 800;
+}
+.james-tittle-text,
+.paises-tittle-text,
+.apps-tittle-text,
+.nueva-tittle-text {
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+.james-description,
+.paises-description,
+.apps-description,
+.nueva-description {
+  text-align: justify;
+  font-size: 12px;
+  font-family: "Univers LT Std", sans-serif;
+  font-weight: 100;
+  line-height: 12px;
+}
+.nueva-description-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#mas-leidas {
+  padding: 7px 15px 7px 15px;
+  font-size: 18px;
+  border-radius: 8px;
+}
+/*------------------- Bloque Recomendadas ---------------------*/
+
+.grid2-container {
+  display: flex;
+  justify-content: center;
+  height: 350px;
+  font-family: "Univers LT Std", sans-serif;
+}
+#recomendadas {
+  padding: 9px 15px 9px 15px;
+  font-size: 18px;
+  border-radius: 8px;
+}
+.meta,
+.fondo,
+.indentidad,
+.cuando {
+  position: relative;
+  height: 160px;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  padding-top: 2px;
+}
+.fondo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 90%;
+  height: 1px;
+  background-color: rgba(128, 128, 128, 0.384);
+}
+.fondo::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  height: 1px;
+  background-color: rgba(128, 128, 128, 0.384);
+}
+.cuando::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  height: 1px;
+  background-color: rgba(128, 128, 128, 0.384);
+}
+.meta,
+.indentidad {
+  border: 1px solid rgba(128, 128, 128, 0.384);
+}
+.meta {
+  border-bottom: none;
+}
+.bloque-vertical {
+  border: 1px solid rgba(128, 128, 128, 0.384);
+  height: 320px;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  padding-top: 13px;
+}
+.como {
+  width: 95%;
+}
+.recomendadas-container {
+  display: flex;
+  justify-content: center;
+}
+.subrecomendadas-container {
+  display: flex;
+  justify-content: start;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.meta-title,
+.fondo-title,
+.indentidad-title,
+.cuando-title,
+.como-title {
+  font-size: 13px;
+  font-weight: 800;
+  text-align: start;
+  letter-spacing: -1px;
+  line-height: 17px;
+}
+.meta-title {
+  font-size: 14px;
+}
+.como-title {
+  font-size: 15px;
+  letter-spacing: -0.7px;
+}
+.fondo-title {
+  font-weight: 900;
+  width: 95%;
+}
+.meta-description,
+.fondo-description,
+.indentidad-description,
+.cuando-description,
+.como-description {
+  text-align: justify;
+  font-size: 12px;
+  font-family: "Univers LT Std", sans-serif;
+  font-weight: 100;
+  line-height: 12px;
+}
+.fondo-description {
+  width: 100%;
+}
+.meta-subtitle,
+.fondo-subtitle,
+.indentidad-subtitle,
+.cuando-subtitle,
+.como-subtitle {
+  text-align: start;
+  margin-top: 15px;
+  font-size: 8px;
+  font-weight: 800;
+  color: gray;
+}
+.sub-meta,
+.sub-fondo,
+.sub-indentidad,
+.sub-cuando,
+.sub-como {
+  width: 98%;
+  height: 85%;
+  display: block;
+  justify-content: space-evenly;
+}
+.meta-title-container,
+.fondo-title-container,
+.indentidad-title-container {
+  height: 22%;
+}
+.como-title-container {
+  height: 18%;
+}
+.cuando-title-container {
+  height: 32%;
+}
+.meta-subtitle-container,
+.fondo-subtitle-container,
+.indentidad-subtitle-container {
+  height: 15%;
+}
+.como-subtitle-container {
+  height: 9%;
+}
+.cuando-subtitle-container {
+  height: 13%;
+}
+.img-como {
+  width: 100%;
+  height: auto;
+}
+.como-img-container {
+  display: flex;
+  justify-content: center;
+  height: 39%;
+}
+.como-img-subcontainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+#section2 {
+  margin-top: 100px;
+}

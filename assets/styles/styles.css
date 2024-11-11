@@ -45,7 +45,6 @@
   margin-right: 20px;
 }
 #cajamain {
-  border: 0px solid red;
   height: 500px;
 }
 .fila {
@@ -103,7 +102,6 @@ h2 {
   margin-bottom: 15px;
 }
 .textocorrido {
-  font-size: 25px;
   font-family: "Univers LT Std", sans-serif;
   font-size: 12px;
   text-align: left;
