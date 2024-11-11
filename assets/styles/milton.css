@@ -148,7 +148,7 @@ th {
 .grid2-container {
   display: flex;
   justify-content: center;
-  height: 350px;
+  height: 450px;
   font-family: "Univers LT Std", sans-serif;
 }
 #recomendadas {
@@ -161,7 +161,7 @@ th {
 .indentidad,
 .cuando {
   position: relative;
-  height: 160px;
+  height: 210px;
   width: 100%;
   flex-direction: column;
   display: flex;
@@ -203,8 +203,7 @@ th {
 }
 .bloque-vertical {
   border: 1px solid rgba(128, 128, 128, 0.384);
-  height: 320px;
-  width: 100%;
+  height: 93%;
   flex-direction: column;
   display: flex;
   justify-content: center;
@@ -230,17 +229,17 @@ th {
 .indentidad-title,
 .cuando-title,
 .como-title {
-  font-size: 13px;
+  font-size: 17px;
   font-weight: 800;
   text-align: start;
   letter-spacing: -1px;
   line-height: 17px;
 }
 .meta-title {
-  font-size: 14px;
+  font-size: 17px;
 }
 .como-title {
-  font-size: 15px;
+  font-size: 17px;
   letter-spacing: -0.7px;
 }
 .fondo-title {
@@ -255,8 +254,9 @@ th {
   text-align: justify;
   font-size: 12px;
   font-family: "Univers LT Std", sans-serif;
-  font-weight: 100;
-  line-height: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0.5px;
 }
 .fondo-description {
   width: 100%;
@@ -278,7 +278,7 @@ th {
 .sub-cuando,
 .sub-como {
   width: 98%;
-  height: 85%;
+  height: 75%;
   display: block;
   justify-content: space-evenly;
 }
@@ -317,7 +317,7 @@ th {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: 140%;
 }
 #section2 {
   margin-top: 100px;
