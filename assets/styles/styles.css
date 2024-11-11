@@ -45,35 +45,30 @@
   margin-right: 20px;
 }
 #cajamain {
-  margin-top: 20px;
   border: 0px solid red;
   height: 500px;
 }
 .fila {
-  border: 0px solid blue;
-  height: 200px;
-  margin: 5px 0px 10px 0px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 170px;
   content: "";
-  top: 1;
-  right: 0;
-  border-bottom: 1px solid rgb(92, 92, 233);
-  box-sizing: border-box;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.438);
 }
 .filaDos {
-  border: 0px solid blue;
   height: 410px;
   margin: 5px 0px 10px 0px;
   padding-top: 0px;
 }
 
 .columna-3-filaUno {
-  border: 0px solid blue;
   margin: 5px 0px 20px 0px;
   padding-bottom: 5px;
   content: "";
   top: 1;
   right: 0;
-  border-bottom: 1px solid rgb(92, 92, 233);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.438);
   box-sizing: border-box;
 }
 .-filaDos {
@@ -83,7 +78,7 @@
   content: "";
   top: 1;
   right: 0;
-  border-bottom: 1px solid rgb(92, 92, 233);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.438);
   box-sizing: border-box;
 }
 .columna-3-filaTres {
@@ -92,8 +87,6 @@
   padding-bottom: 5px;
 }
 .filadoscentro {
-  border: 0px solid blue;
-  height: 250px;
   margin: 5px 0px 10px 0px;
 }
 .divsubmarino {
@@ -103,28 +96,29 @@
 }
 h2 {
   font-family: "Univers LT Std", sans-serif, bold;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.05;
   text-align: left;
+  font-size: 23px;
+  margin-bottom: 15px;
 }
 .textocorrido {
-  margin-top: 0px;
-  margin-bottom: 15px;
-
+  font-size: 25px;
   font-family: "Univers LT Std", sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   text-align: left;
   line-height: 1.2;
+  font-weight: 500;
 }
 .nombreEscritor {
   font-family: "Univers LT Std", sans-serif;
-  font-size: 12px;
+  font-size: 10px;
   text-align: left;
   line-height: 1.2;
 }
 .paisEscritor {
   font-family: "Univers LT Std", sans-serif;
-  font-size: 12px;
+  font-size: 10px;
   text-align: left;
   line-height: 1.2;
   color: #696969;
@@ -141,8 +135,6 @@ h2 {
 }
 .nombre-pais {
   display: flex;
-  margin-top: 20px;
-  margin-bottom: 0px;
 }
 .titulo-principal {
   margin-top: 21px;
@@ -154,16 +146,16 @@ h2 {
   content: "";
   top: 1;
   right: 0;
-  height: 678px;
-  border-left: 1px solid rgb(92, 92, 233);
+  height: 540px;
+  border-left: 1px solid rgba(128, 128, 128, 0.438);
   box-sizing: border-box;
 }
 #columna-1 {
   content: "";
   top: 1;
   right: 0;
-  height: 82%;
-  border-right: 1px solid rgb(92, 92, 233);
+  height: 540px;
+  border-right: 1px solid rgba(128, 128, 128, 0.438);
   box-sizing: border-box;
 }
 #seccion-principales {
@@ -171,8 +163,8 @@ h2 {
   content: "";
   top: 1;
   right: 0;
-  height: 668px;
-  border-bottom: 1px solid rgb(92, 92, 233);
+  height: 570px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.438);
   box-sizing: border-box;
 }
 /*-------------------------------------------------------------*/
@@ -185,4 +177,36 @@ li {
 #item-banner {
   margin: 5px;
   padding: 0;
+}
+#text-idioma {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 14px;
+}
+.text-date {
+  margin: 0;
+}
+#text-drop {
+  margin-bottom: 20px;
+}
+.form-control {
+  font-size: 14px;
+}
+#input-search {
+  height: 33px;
+  border-radius: 5px;
+}
+#button-search {
+  font-size: 14px;
+  height: 33px;
+}
+.columna-3-filaDos {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.438);
 }
