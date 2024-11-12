@@ -1,0 +1,161 @@
+* {
+  font-family: "Univers LT Std", sans-serif, bold;
+}
+#editor {
+  display: flex;
+  border: 1px solid rgba(128, 128, 128, 0.459);
+  border-radius: 10px;
+  justify-content: center;
+  padding: 1px;
+  margin: auto;
+  text-align: center;
+  height: 45px;
+}
+
+#edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col-6 {
+  display: flex;
+}
+
+.cold-4 {
+  display: grid;
+}
+
+#dos {
+  display: flex;
+}
+
+#mini {
+  margin-top: 15px;
+  display: grid;
+}
+
+#pub {
+  margin-top: 15px;
+  display: grid;
+  color: blue;
+}
+#Grupo,
+#area {
+  border-right: 1px solid rgba(128, 128, 128, 0.459);
+  margin-right: 20px;
+  margin-left: 20px;
+  justify-content: space-between;
+}
+
+#area a {
+  display: grid;
+  text-decoration: none;
+  color: black;
+}
+
+#Grupo a {
+  display: grid;
+  text-decoration: none;
+  color: black;
+}
+
+#Publicidad a {
+  display: grid;
+  text-decoration: none;
+  color: black;
+  justify-content: space-between;
+}
+
+#area a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+#Grupo a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+#Publicidad a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+h6 {
+  color: black;
+}
+#area,
+#Grupo,
+#Publicidad h5 {
+  margin-top: 15px;
+  color: blue;
+}
+
+.pie {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#marcamini {
+  width: 100%;
+  height: 100%;
+}
+
+#minibutt {
+  margin-bottom: auto;
+  /* margin: auto;*/
+  display: inline-block;
+  height: 250px;
+  width: 200px;
+  text-align: left;
+}
+
+#contact {
+  width: 15%;
+  height: 15%;
+  display: flex;
+}
+
+#Superior {
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+#marca {
+  display: flex;
+  justify-content: center;
+}
+.tecnotab-redes {
+  font-size: 15px;
+}
+.piedras,
+.numero,
+.editor-responsable,
+.registro {
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+}
+.publicidad,
+.grupo-tecno,
+.area-digital {
+  font-size: 17px;
+}
+a {
+  font-size: 13px;
+  padding: 3px 0px;
+}
+.h6-tecnotab {
+  font-size: 14px;
+}
+.pago-mensual {
+  font-size: 12px;
+}
+.leer-edicion {
+  font-size: 12px;
+  font-style: oblique;
+}
+#container-espanol {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+}
