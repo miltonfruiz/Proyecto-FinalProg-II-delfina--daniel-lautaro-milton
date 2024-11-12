@@ -159,3 +159,23 @@ a {
   flex-direction: column;
   align-items: flex-end;
 }
+#pay-label,
+#email-label,
+#name-label {
+  font-size: 15px;
+  text-align: left;
+}
+#submit-button {
+  font-size: 13px;
+  border-radius: 3px;
+  width: 30%;
+}
+.form-label {
+  margin-bottom: 0.5rem;
+}
+.col-sm-4 {
+  text-align: left;
+}
+#label-text {
+  font-size: 15px;
+}

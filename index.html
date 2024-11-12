@@ -101,7 +101,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="subscriptionModalLabel">
-                  Suscripción
+                  <i class="fa-solid fa-thumbs-up"></i> Suscripción
                 </h5>
                 <button
                   type="button"
@@ -112,28 +112,161 @@
               </div>
               <div class="modal-body">
                 <form id="subscriptionForm">
-                  <div class="mb-3">
-                    <label for="name" class="form-label">Nombre</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="name"
-                      required
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <label for="email" class="form-label"
-                      >Correo Electrónico</label
+                  <div class="mb-3 row">
+                    <label
+                      id="label-text"
+                      for="name"
+                      class="col-sm-4 col-form-label small"
+                      ><i class="fa-solid fa-signature"></i> Nombre</label
                     >
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      required
-                    />
+                    <div class="col-sm-8">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        required
+                      />
+                    </div>
                   </div>
-                  <button type="submit" class="btn btn-primary w-100">
-                    Enviar
+                  <div class="mb-3 row">
+                    <label
+                      id="label-text"
+                      for="email"
+                      class="col-sm-4 col-form-label small"
+                      ><i class="fa-solid fa-envelope"></i> Correo
+                    </label>
+                    <div class="col-sm-8">
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label
+                      id="label-text"
+                      for="birthdate"
+                      class="col-sm-4 col-form-label small"
+                      ><i class="fa-solid fa-cake-candles"></i>
+                      Nacimiento</label
+                    >
+                    <div class="col-sm-8">
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="birthdate"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label
+                      id="label-text"
+                      for="gender"
+                      class="col-sm-4 col-form-label small"
+                      ><i class="fa-solid fa-user"></i> Género</label
+                    >
+                    <div class="col-sm-8">
+                      <select class="form-control" id="gender" required>
+                        <option value="">Seleccionar</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label
+                      id="label-text"
+                      for="country"
+                      class="col-sm-4 col-form-label small"
+                      ><i class="fa-solid fa-flag"></i> País</label
+                    >
+                    <div class="col-sm-8">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="country"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label
+                      id="label-text"
+                      for="phone"
+                      class="col-sm-4 col-form-label small"
+                      ><i class="fa-solid fa-phone"></i> Teléfono</label
+                    >
+                    <div class="col-sm-8">
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="phone"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label
+                      id="label-text"
+                      for="paymentOption"
+                      class="col-sm-4 col-form-label small"
+                      ><i class="fa-solid fa-file-invoice-dollar"></i> Opción de
+                      Pago</label
+                    >
+                    <div class="col-sm-8">
+                      <select class="form-control" id="paymentOption" required>
+                        <option value="mensual">Mensual (95)</option>
+                        <option value="semestral">Durante 6 meses</option>
+                        <option value="anual">Anual</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label
+                      id="label-text"
+                      for="paymentMethod"
+                      class="col-sm-4 col-form-label small"
+                      ><i class="fa-solid fa-hand-holding-dollar"></i> Método de
+                      Pago</label
+                    >
+                    <div class="col-sm-8">
+                      <select class="form-control" id="paymentMethod" required>
+                        <option value="">Seleccionar</option>
+                        <option value="tarjeta">Tarjeta</option>
+                        <option value="efectivo">Efectivo</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    class="mb-3 row"
+                    id="cardTypeContainer"
+                    style="display: none"
+                  >
+                    <label
+                      id="label-text"
+                      for="cardType"
+                      class="col-sm-4 col-form-label small"
+                      >Tipo de Tarjeta</label
+                    >
+                    <div class="col-sm-8">
+                      <select class="form-control" id="cardType">
+                        <option value="">Seleccionar</option>
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">MasterCard</option>
+                        <option value="amex">American Express</option>
+                      </select>
+                    </div>
+                  </div>
+                  <button
+                    id="submit-button"
+                    type="submit"
+                    class="btn btn-success"
+                  >
+                    <i class="fa-solid fa-paper-plane"></i> Enviar
                   </button>
                 </form>
                 <div
@@ -147,19 +280,6 @@
             </div>
           </div>
         </div>
-        <script>
-          document
-            .getElementById("subscriptionForm")
-            .addEventListener("submit", function (event) {
-              event.preventDefault();
-              const name = document.getElementById("name").value;
-              const email = document.getElementById("email").value;
-              document.getElementById("successMessage").style.display = "block";
-              console.log("Nombre:", name);
-              console.log("Correo:", email);
-              document.getElementById("subscriptionForm").reset();
-            });
-        </script>
         <div id="barraSecciones">
           <div id="item-banner" class="dropdown">
             <button
@@ -871,7 +991,7 @@
                   Pago Mensual, Durante 6 meses o Anual
                 </p>
                 <a id="suscribete" class="btn btn-dark" href="#" role="button"
-                  ><i class="fa-solid fa-bell"></i> Suscríbete</a
+                  ><i class="fa-solid fa-bell"></i> Suscríbete por $95</a
                 >
               </div>
 
@@ -898,5 +1018,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="./assets/scripts/scripts.js"></script>
   </body>
 </html>
