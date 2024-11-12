@@ -99,7 +99,7 @@ th {
 }
 
 .number {
-  font-size: 15px;
+  font-size: 17px;
   position: absolute;
   top: -5px;
   left: -3px;
@@ -152,9 +152,9 @@ th {
   font-family: "Univers LT Std", sans-serif;
 }
 #recomendadas {
-  padding: 9px 15px 9px 15px;
-  font-size: 18px;
-  border-radius: 8px;
+  border-radius: 5px;
+  font-size: 13px;
+  padding: 10px 35px;
 }
 .meta,
 .fondo,
@@ -321,4 +321,10 @@ th {
 }
 #section2 {
   margin-top: 100px;
+}
+.fa-language {
+  font-size: 13px;
+}
+#container-search {
+  margin-right: 100px;
 }
