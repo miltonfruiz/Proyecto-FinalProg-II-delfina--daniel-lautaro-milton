@@ -12,6 +12,10 @@
   margin-left: 5px;
 }
 .coltres {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: end;
   border: 0px solid blue;
   margin-left: 5px;
 }
@@ -31,6 +35,7 @@
   border-radius: 5px;
   font-size: 13px;
   padding: 7px 25px;
+  width: 130px;
 }
 .bienvenida {
   width: 200px;
