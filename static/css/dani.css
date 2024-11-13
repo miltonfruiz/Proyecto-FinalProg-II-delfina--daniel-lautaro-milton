@@ -117,7 +117,7 @@ h6 {
 }
 
 #Superior {
-  margin-top: 70px;
+  margin-top: 90px;
   margin-bottom: 30px;
 }
 #marca {
@@ -210,4 +210,13 @@ a {
 #support {
   color: white;
   text-decoration: none;
+}
+#redes-tecnotab {
+  margin: 3px;
+  transition: 1s;
+  font-size: 25px;
+}
+#redes-tecnotab:hover {
+  color: black;
+  transition: 1s;
 }

@@ -18,7 +18,7 @@ th {
 }
 .grid1-subcontainer {
   height: 270px;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.459);
+  border-bottom: 1px solid rgb(20, 35, 201);
 }
 .h3-text {
   background-color: black;
@@ -46,7 +46,7 @@ th {
   top: 1;
   right: 0;
   height: 108%;
-  border-left: 1px solid rgba(128, 128, 128, 0.459);
+  border-left: 1px solid rgb(20, 35, 201);
   box-sizing: border-box;
 }
 .james-subcontainer,
@@ -178,7 +178,7 @@ th {
   top: 0;
   width: 90%;
   height: 1px;
-  background-color: rgba(128, 128, 128, 0.384);
+  background-color: rgb(20, 35, 201);
 }
 .fondo::after {
   content: "";
@@ -186,7 +186,7 @@ th {
   bottom: 0;
   width: 90%;
   height: 1px;
-  background-color: rgba(128, 128, 128, 0.384);
+  background-color: rgb(20, 35, 201);
 }
 .cuando::before {
   content: "";
@@ -194,17 +194,17 @@ th {
   bottom: 0;
   width: 90%;
   height: 1px;
-  background-color: rgba(128, 128, 128, 0.384);
+  background-color: rgb(20, 35, 201);
 }
 .meta,
 .indentidad {
-  border: 1px solid rgba(128, 128, 128, 0.384);
+  border: 1px solid rgb(20, 35, 201);
 }
 .meta {
   border-bottom: none;
 }
 .bloque-vertical {
-  border: 1px solid rgba(128, 128, 128, 0.384);
+  border: 1px solid rgb(20, 35, 201);
   height: 93%;
   flex-direction: column;
   display: flex;
