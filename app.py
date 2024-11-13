@@ -11,9 +11,6 @@ def subscribe():
     data = {
         "name": request.form.get("name"),
         "email": request.form.get("email"),
-        "birthdate": request.form.get("birthdate"),
-        "gender": request.form.get("gender"),
-        "country": request.form.get("country"),
         "phone": request.form.get("phone"),
         "paymentOption": request.form.get("paymentOption"),
         "paymentMethod": request.form.get("paymentMethod"),
