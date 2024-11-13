@@ -165,10 +165,19 @@ a {
   font-size: 15px;
   text-align: left;
 }
+#cancel-button,
 #submit-button {
   font-size: 13px;
   border-radius: 3px;
   width: 30%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#cancel-button:hover,
+#submit-button:hover {
+  border: 1px solid whitesmoke;
+  transition: 1s;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 .form-label {
   margin-bottom: 0.5rem;
@@ -178,4 +187,16 @@ a {
 }
 #label-text {
   font-size: 15px;
+}
+.modal-content {
+  border-radius: 5px;
+  border: 1px solid rgba(128, 128, 128, 0.521);
+}
+.fotomarca {
+  transition: 1s;
+}
+.fotomarca:hover {
+  transition: 1s;
+  transform: scale(1.02);
+  filter: drop-shadow(0 0 0.75rem rgba(0, 0, 255, 0.315));
 }

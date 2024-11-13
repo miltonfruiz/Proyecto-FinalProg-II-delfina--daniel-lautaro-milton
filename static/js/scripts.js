@@ -9,15 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
         cardTypeContainer.style.display = "none";
       }
     });
+
   document
     .getElementById("subscriptionForm")
     .addEventListener("submit", function (event) {
       event.preventDefault();
       const name = document.getElementById("name").value;
       const email = document.getElementById("email").value;
-      const birthdate = document.getElementById("birthdate").value;
-      const gender = document.getElementById("gender").value;
-      const country = document.getElementById("country").value;
       const phone = document.getElementById("phone").value;
       const paymentOption = document.getElementById("paymentOption").value;
       const paymentMethod = document.getElementById("paymentMethod").value;
@@ -39,9 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
         body: JSON.stringify({
           name: name,
           email: email,
-          birthdate: birthdate,
-          gender: gender,
-          country: country,
           phone: phone,
           paymentOption: paymentOption,
           paymentMethod: paymentMethod,
@@ -69,6 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
           console.error("Error en la solicitud:", error);
           alert("Hubo un error al procesar la suscripción.");
         });
+
       document.getElementById("subscriptionForm").reset();
       document.getElementById("cardTypeContainer").style.display = "none";
     });

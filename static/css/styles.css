@@ -177,7 +177,12 @@ li {
   font-size: 13px;
   padding: 7px 20px;
 }
+#suscribete,
+#boton-idioma {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 #item-banner {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 0;
 }
 #text-idioma {
@@ -190,7 +195,7 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 12px;
+  font-size: 11px;
 }
 .text-date {
   margin: 0;
