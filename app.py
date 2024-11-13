@@ -44,7 +44,7 @@ def subscribe():
 
 @app.route('/internacional')
 def internacional():
-    return render_template('internacional.html')
+    return render_template('delfi-internacional.html')
 
 @app.route('/redirect_to_index')
 def redirect_to_index():
