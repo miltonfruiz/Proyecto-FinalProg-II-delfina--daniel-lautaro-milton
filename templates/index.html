@@ -46,7 +46,7 @@
               </div>
               <div class="dropdown col-4">
                 <button
-                  id="boton-idioma"
+                  id="boton-idioma2"
                   class="btn btn-dark dropdown-toggle"
                   type="button"
                   data-bs-toggle="dropdown"
@@ -227,52 +227,77 @@
             <li>
               <a class="dropdown-item active" href="#">Últimas Noticias</a>
             </li>
-            <li><a class="dropdown-item" href="#">Lo más visto</a></li>
-            <li><a class="dropdown-item" href="#">Actualidad</a></li>
-            <li><a class="dropdown-item" href="#">Recomendado</a></li>
-            <li><a class="dropdown-item" href="#">Multimedia</a></li>
-            <li><a class="dropdown-item" href="#">Buscador</a></li>
-            <li><a class="dropdown-item" href="#">Edición Impresa</a></li>
+            <li><a class="dropdown-item" href="#mas-leidas">Más Leídas</a></li>
+            <li>
+              <a class="dropdown-item" href="#recomendadas">Recomendados</a>
+            </li>
           </ul>
         </div>
         <div id="item-banner" class="dropdown">
-          <button id="boton-idioma" class="btn btn-dark" type="button">
+          <button id="boton-idioma" class="btn btn-primary" type="button">
             Internacional
           </button>
         </div>
         <div id="item-banner" class="dropdown">
           <button id="boton-idioma" class="btn btn-dark" type="button">
-            Argentina
+            <a
+              id="argentina"
+              href="https://es.wikipedia.org/wiki/Argentina"
+              target="_blank"
+              >Argentina</a
+            >
           </button>
         </div>
         <div id="item-banner" class="dropdown">
           <button id="boton-idioma" class="btn btn-dark" type="button">
-            Opinión
+            <a
+              id="opinion"
+              href="https://www.lanacion.com.ar/opinion/"
+              target="_blank"
+              >Opinión</a
+            >
           </button>
         </div>
         <div id="item-banner" class="dropdown">
           <button id="boton-idioma" class="btn btn-dark" type="button">
-            Innovaciones
+            <a
+              id="innovacion"
+              href="https://www.repsol.com/es/energia-futuro/tecnologia-innovacion/tipos-de-innovacion/index.cshtml"
+              target="_blank"
+              >Innovaciones</a
+            >
           </button>
         </div>
         <div id="item-banner" class="dropdown">
           <button id="boton-idioma" class="btn btn-dark" type="button">
-            IA
+            <a
+              id="IA"
+              href="https://gemini.google.com/?hl=es-419"
+              target="_blank"
+              >IA</a
+            >
           </button>
         </div>
         <div id="item-banner" class="dropdown">
           <button id="boton-idioma" class="btn btn-dark" type="button">
-            Cultura
+            <a id="cultura" href="https://concepto.de/cultura/" target="_blank"
+              >Cultura</a
+            >
           </button>
         </div>
         <div id="item-banner" class="dropdown">
           <button id="boton-idioma" class="btn btn-dark" type="button">
-            Educación
+            <a
+              id="educacion"
+              href="https://educacion.santafe.gob.ar/"
+              target="_blank"
+              >Educación</a
+            >
           </button>
         </div>
         <div id="item-banner" class="dropdown">
           <button id="boton-idioma" class="btn btn-dark" type="button">
-            Empresas
+            <a id="support" href="#soporte-tecnico">Soporte Técnico</a>
           </button>
         </div>
       </div>
@@ -383,7 +408,7 @@
         <div class="container text-center mt-5">
           <div class="row recomendadas-container">
             <div class="col subrecomendadas-container">
-              <h3 id="recomendadas" class="h3-text">
+              <h3 id="mas-leidas" class="h3-text">
                 <i class="fa-solid fa-book-open"></i> Más Leídas
               </h3>
             </div>
@@ -396,7 +421,7 @@
                     <div class="james-img">
                       <div class="james-sub-img">
                         <img
-                          src="{{ url_for('static', filename='assets/images/foto-sophia-06.jpg') }}"
+                          src="{{ url_for('static', filename='assets/images/james.png') }}"
                           alt="James Image"
                           class="james-img-container"
                         />
@@ -424,7 +449,7 @@
                     <div class="paises-img">
                       <div class="paises-sub-img">
                         <img
-                          src="{{ url_for('static', filename='assets/images/foto-sophia-06.jpg') }}"
+                          src="{{ url_for('static', filename='assets/images/global.png') }}"
                           alt="Paises Image"
                           class="paises-img-container"
                         />
@@ -452,7 +477,7 @@
                     <div class="apps-img">
                       <div class="apps-sub-img">
                         <img
-                          src="{{ url_for('static', filename='assets/images/foto-sophia-06.jpg') }}"
+                          src="{{ url_for('static', filename='assets/images/app.png') }}"
                           alt="Apps Image"
                           class="apps-img-container"
                         />
@@ -480,7 +505,7 @@
                     <div class="nueva-img">
                       <div class="nueva-sub-img">
                         <img
-                          src="{{ url_for('static', filename='assets/images/foto-sophia-06.jpg') }}"
+                          src="{{ url_for('static', filename='assets/images/robot.png') }}"
                           alt="Nueva Image"
                           class="nueva-img-container"
                         />
@@ -659,8 +684,8 @@
                     <div class="como-img-subcontainer">
                       <img
                         class="img-como"
-                        src="./assets/images/foto-sophia-06.jpg"
-                        alt=""
+                        src="{{ url_for('static', filename='assets/images/digital.png') }}"
+                        alt="sophia_img"
                       />
                     </div>
                   </div>
@@ -676,23 +701,32 @@
         <div class="row" id="Superior">
           <div class="col">
             <h3 class="tecnotab-redes">Tecnotab Redes Sociales</h3>
-            <img
-              width="30"
-              src="{{ url_for('static', filename='assets/images/logo face.png') }}"
-            />
-            <img
-              width="30"
-              src="{{ url_for('static', filename='assets/images/logo Insta.png') }}"
-            />
-            <img
-              width="30"
-              src="{{ url_for('static', filename='assets/images/logo tel.png') }}"
-            />
-            <img
-              width="30"
-              src="{{ url_for('static', filename='assets/images/logo Tuit.png') }}"
-            />
-            <img width="30" src="./assets/images/logo you.png" />
+
+            <a href="www.facebook.com" target="_blank"
+              ><img
+                width="30"
+                src="{{ url_for('static', filename='assets/images/logo face.png') }}"
+            /></a>
+            <a href="www.instagram.com"
+              ><img
+                width="30"
+                src="{{ url_for('static', filename='assets/images/logo Insta.png') }}"
+            /></a>
+            <a href="www.telegram.com"
+              ><img
+                width="30"
+                src="{{ url_for('static', filename='assets/images/logo tel.png') }}"
+            /></a>
+            <a href="www.twitter.com"
+              ><img
+                width="30"
+                src="{{ url_for('static', filename='assets/images/logo Tuit.png') }}"
+            /></a>
+            <a href="wwww.youtube.com"
+              ><img
+                width="30"
+                src="{{ url_for('static', filename='assets/images/logo you.png') }}"
+            /></a>
           </div>
           <div class="col" id="marca">
             <img
@@ -703,7 +737,7 @@
           <div class="col text-end" id="container-espanol">
             <div class="dropdown col-4">
               <button
-                id="boton-idioma"
+                id="boton-idioma2"
                 class="btn btn-dark dropdown-toggle"
                 type="button"
                 data-bs-toggle="dropdown"
@@ -750,7 +784,7 @@
           </div>
         </div>
         <div class="row mt-4">
-          <div class="col-6">
+          <div id="soporte-tecnico" class="col-6">
             <div class="col" id="area">
               <h5 class="area-digital"><strong>Area Digital</strong></h5>
               <a href="https://www.google.com.ar">Diario</a>
@@ -797,7 +831,13 @@
                 <p class="pago-mensual">
                   Pago Mensual, Durante 6 meses o Anual
                 </p>
-                <a id="suscribete" class="btn btn-dark" href="#" role="button"
+                <a
+                  id="suscribete2"
+                  class="btn btn-dark"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#subscriptionModal"
                   ><i class="fa-solid fa-bell"></i> Suscríbete por $95</a
                 >
               </div>

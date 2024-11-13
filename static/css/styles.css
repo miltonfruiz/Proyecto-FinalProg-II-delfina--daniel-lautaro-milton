@@ -37,6 +37,12 @@
   padding: 7px 25px;
   width: 168px;
 }
+#suscribete2 {
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 7px 25px;
+  width: 178px;
+}
 .bienvenida {
   width: 200px;
   font-size: 13px;
@@ -58,7 +64,7 @@
   flex-direction: column;
   height: 170px;
   content: "";
-  border-bottom: 1px solid rgba(128, 128, 128, 0.438);
+  border-bottom: 1px solid rgb(20, 35, 201);
 }
 .filaDos {
   height: 410px;
@@ -72,7 +78,7 @@
   content: "";
   top: 1;
   right: 0;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.438);
+  border-bottom: 1px solid rgb(20, 35, 201);
   box-sizing: border-box;
 }
 .-filaDos {
@@ -82,7 +88,7 @@
   content: "";
   top: 1;
   right: 0;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.438);
+  border-bottom: 1px solid rgb(20, 35, 201);
   box-sizing: border-box;
 }
 .columna-3-filaTres {
@@ -107,11 +113,12 @@ h2 {
   margin-bottom: 15px;
 }
 .textocorrido {
+  text-align: justify;
+  font-size: 10px;
   font-family: "Univers LT Std", sans-serif;
-  font-size: 12px;
-  text-align: left;
-  line-height: 1.2;
   font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0.5px;
 }
 .nombreEscritor {
   font-family: "Univers LT Std", sans-serif;
@@ -150,7 +157,7 @@ h2 {
   top: 1;
   right: 0;
   height: 540px;
-  border-left: 1px solid rgba(128, 128, 128, 0.438);
+  border-left: 1px solid rgb(20, 35, 201);
   box-sizing: border-box;
 }
 #columna-1 {
@@ -158,7 +165,7 @@ h2 {
   top: 1;
   right: 0;
   height: 540px;
-  border-right: 1px solid rgba(128, 128, 128, 0.438);
+  border-right: 1px solid rgb(20, 35, 201);
   box-sizing: border-box;
 }
 #seccion-principales {
@@ -167,15 +174,20 @@ h2 {
   top: 1;
   right: 0;
   height: 570px;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.438);
+  border-bottom: 1px solid rgb(20, 35, 201);
   box-sizing: border-box;
 }
 /*-------------------------------------------------------------*/
+#boton-idioma2,
 #boton-idioma,
 li {
-  border-radius: 5px;
+  border-radius: 3px;
   font-size: 13px;
   padding: 7px 20px;
+}
+#boton-idioma {
+  border: 1px solid rgb(20, 35, 201);
+  background-color: rgb(20, 35, 201);
 }
 #suscribete,
 #boton-idioma {
@@ -216,5 +228,5 @@ li {
   height: 33px;
 }
 .columna-3-filaDos {
-  border-bottom: 1px solid rgba(128, 128, 128, 0.438);
+  border-bottom: 1px solid rgb(20, 35, 201);
 }

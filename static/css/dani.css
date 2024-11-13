@@ -13,6 +13,7 @@
 }
 
 #edit {
+  font-family: "Univers LT Std", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -199,4 +200,14 @@ a {
   transition: 1s;
   transform: scale(1.02);
   filter: drop-shadow(0 0 0.75rem rgba(0, 0, 255, 0.315));
+}
+#educacion,
+#cultura,
+#IA,
+#innovacion,
+#opinion,
+#argentina,
+#support {
+  color: white;
+  text-decoration: none;
 }
