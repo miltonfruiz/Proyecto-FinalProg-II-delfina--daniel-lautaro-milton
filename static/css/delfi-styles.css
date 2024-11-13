@@ -1,0 +1,68 @@
+/*------------------- Selector Universal ---------------------*/
+* {
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+}
+
+/*----------------------- I N D E X ---------------------*/
+
+th {
+   border: 1px solid black;
+}
+
+.marca {
+   width: 240px;
+   height: auto;
+   margin: 20px;
+   display: block;
+   margin: auto;
+   padding: 20px;
+   margin-top: 10px;
+   object-fit: contain;
+}
+
+/*-----------------------B A R R A ---------------------*/
+
+.barranavegacion{
+   font-family: Univers LT Std, bold;
+   font-size: 13px;
+   border-bottom-left-radius: 15px;
+   border-bottom-right-radius: 15px;
+   list-style-type: none;
+   margin: 0px;
+   padding: 0;
+   top: 100px;
+   text-align: center;
+   display: flex;
+}
+li {
+   margin-right: 50px;
+}
+
+h1,
+h2 {
+   font-family: Univers LT Std, bold;
+
+
+}
+
+*** p {
+   font-family: Univers LT Std;
+
+}
+
+.sophia {
+   width: 500px;
+   height: auto;
+   display: block;
+   margin: auto;
+   padding: 20px;
+   object-fit: contain;
+
+}
+
+
+ul:link {
+   color: black;
+}

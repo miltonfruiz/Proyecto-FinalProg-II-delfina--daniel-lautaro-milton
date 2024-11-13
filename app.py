@@ -17,5 +17,9 @@ def subscribe():
     }
     return jsonify({"success": True, "message": "Subscription successful!"})
 
+@app.route('/internacional')
+def internacional():
+    return render_template('delfi-internacional.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
