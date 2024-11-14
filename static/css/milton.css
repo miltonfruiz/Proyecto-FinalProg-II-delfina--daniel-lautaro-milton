@@ -331,3 +331,10 @@ th {
 #container-search {
   margin-right: 100px;
 }
+#lista-suscriptores {
+  font-size: 12px;
+  border-radius: 5px;
+  font-size: 12px;
+  padding: 8px 25px;
+  width: 190px;
+}
