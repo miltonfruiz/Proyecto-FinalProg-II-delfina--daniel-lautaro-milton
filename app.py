@@ -10,7 +10,7 @@ def init_db():
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     name TEXT,
                     email TEXT,
-                    phone TEXT,  -- Cambié # a -- aquí
+                    phone TEXT,
                     payment_option TEXT,
                     payment_method TEXT,
                     card_type TEXT)''')
@@ -34,6 +34,7 @@ def subscribe():
     payment_option = data['paymentOption']
     payment_method = data['paymentMethod']
     card_type = data.get('cardType', '')
+    
     conn = sqlite3.connect('subscribers.db')
     c = conn.cursor()
     c.execute("INSERT INTO subscribers (name, email, phone, payment_option, payment_method, card_type) VALUES (?, ?, ?, ?, ?, ?)", 
@@ -60,6 +61,38 @@ def get_subscribers():
     ]
     conn.close()
     return jsonify(subscribers)
+
+@app.route('/edit_subscriber/<int:id>', methods=['POST'])
+def edit_subscriber(id):
+    data = request.get_json()
+    name = data['name']
+    email = data['email']
+    phone = data['phone']
+    payment_option = data['paymentOption']
+    payment_method = data['paymentMethod']
+    card_type = data.get('cardType', '')
+    
+    conn = sqlite3.connect('subscribers.db')
+    c = conn.cursor()
+    c.execute('''
+        UPDATE subscribers
+        SET name = ?, email = ?, phone = ?, payment_option = ?, payment_method = ?, card_type = ?
+        WHERE id = ?
+    ''', (name, email, phone, payment_option, payment_method, card_type, id))
+    conn.commit()
+    conn.close()
+    
+    return jsonify(success=True)
+
+@app.route('/delete_subscriber/<int:id>', methods=['DELETE'])
+def delete_subscriber(id):
+    conn = sqlite3.connect('subscribers.db')
+    c = conn.cursor()
+    c.execute('DELETE FROM subscribers WHERE id = ?', (id,))
+    conn.commit()
+    conn.close()
+    
+    return jsonify(success=True)
 
 @app.route('/internacional')
 def internacional():

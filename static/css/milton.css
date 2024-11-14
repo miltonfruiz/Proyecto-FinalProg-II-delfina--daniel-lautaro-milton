@@ -338,3 +338,19 @@ th {
   padding: 8px 25px;
   width: 190px;
 }
+.table-striped td,
+.table-striped th {
+  font-size: 13px;
+}
+.custom-modal {
+  max-width: 90%;
+  width: 80%;
+  margin: auto;
+}
+#boton-borrar,
+#boton-editar {
+  font-size: 12px;
+  border-radius: 3px;
+  font-size: 12px;
+  padding: 8px 20px;
+}

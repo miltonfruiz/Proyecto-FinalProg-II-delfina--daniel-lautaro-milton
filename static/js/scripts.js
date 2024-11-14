@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     modalButton.addEventListener("click", loadSubscribers);
   }
 });
+
 function loadSubscribers() {
   fetch("/get_subscribers")
     .then((response) => response.json())
@@ -87,9 +88,34 @@ function loadSubscribers() {
           <td>${subscriber.payment_option}</td>
           <td>${subscriber.payment_method}</td>
           <td>${subscriber.card_type}</td>
+          <td>
+            <button id="boton-editar" class="btn btn-primary btn-sm" onclick="editSubscriber(${subscriber.id})"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
+            <button id="boton-borrar" class="btn btn-danger btn-sm" onclick="deleteSubscriber(${subscriber.id})"><i class="fa-solid fa-trash"></i> Borrar</button>
+          </td>
         `;
         tableBody.appendChild(row);
       });
     })
     .catch((error) => console.error("Error cargando los suscriptores:", error));
+}
+function editSubscriber(id) {
+  alert(`Editar suscriptor con ID: ${id}`);
+}
+
+function deleteSubscriber(id) {
+  if (confirm("¿Estás seguro de que deseas borrar este suscriptor?")) {
+    fetch(`/delete_subscriber/${id}`, {
+      method: "DELETE",
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          alert("Suscriptor borrado con éxito.");
+          loadSubscribers();
+        } else {
+          alert("Error al borrar el suscriptor.");
+        }
+      })
+      .catch((error) => console.error("Error borrando el suscriptor:", error));
+  }
 }
