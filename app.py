@@ -42,6 +42,25 @@ def subscribe():
     conn.close()
     return jsonify(success=True)
 
+@app.route('/get_subscribers', methods=['GET'])
+def get_subscribers():
+    conn = sqlite3.connect('subscribers.db')
+    c = conn.cursor()
+    c.execute("SELECT id, name, email, phone, payment_option, payment_method, card_type FROM subscribers")
+    subscribers = [
+        {
+            'id': row[0],
+            'name': row[1],
+            'email': row[2],
+            'phone': row[3],
+            'payment_option': row[4],
+            'payment_method': row[5],
+            'card_type': row[6]
+        } for row in c.fetchall()
+    ]
+    conn.close()
+    return jsonify(subscribers)
+
 @app.route('/internacional')
 def internacional():
     return render_template('delfi-internacional.html')
