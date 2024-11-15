@@ -23,7 +23,22 @@ def init_db():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    conn = sqlite3.connect('subscribers.db')
+    c = conn.cursor()
+    c.execute("SELECT id, name, email, phone, payment_option, payment_method, card_type FROM subscribers")
+    subscribers = [
+        {
+            'id': row[0],
+            'name': row[1],
+            'email': row[2],
+            'phone': row[3],
+            'payment_option': row[4],
+            'payment_method': row[5],
+            'card_type': row[6]
+        } for row in c.fetchall()
+    ]
+    conn.close()
+    return render_template('index.html', subscribers=subscribers)
 
 @app.route('/subscribe', methods=['POST'])
 def subscribe():
@@ -34,10 +49,14 @@ def subscribe():
     payment_option = data['paymentOption']
     payment_method = data['paymentMethod']
     card_type = data.get('cardType', '')
-    
+
+
+    if not name or not email or not payment_option or not payment_method:
+        return jsonify(success=False, message="Faltan datos requeridos")
+
     conn = sqlite3.connect('subscribers.db')
     c = conn.cursor()
-    c.execute("INSERT INTO subscribers (name, email, phone, payment_option, payment_method, card_type) VALUES (?, ?, ?, ?, ?, ?)", 
+    c.execute("INSERT INTO subscribers (name, email, phone, payment_option, payment_method, card_type) VALUES (?, ?, ?, ?, ?, ?)",
               (name, email, phone, payment_option, payment_method, card_type))
     conn.commit()
     conn.close()
@@ -65,23 +84,24 @@ def get_subscribers():
 @app.route('/edit_subscriber/<int:id>', methods=['POST'])
 def edit_subscriber(id):
     data = request.get_json()
-    name = data['name']
-    email = data['email']
-    phone = data['phone']
-    payment_option = data['paymentOption']
-    payment_method = data['paymentMethod']
+    name = data.get('name')
+    email = data.get('email')
+    phone = data.get('phone')
+    payment_option = data.get('paymentOption')
+    payment_method = data.get('paymentMethod')
     card_type = data.get('cardType', '')
-    
+    if not name or not email or not payment_option or not payment_method:
+        return jsonify(success=False, message="Faltan datos requeridos")
+
     conn = sqlite3.connect('subscribers.db')
     c = conn.cursor()
-    c.execute('''
-        UPDATE subscribers
-        SET name = ?, email = ?, phone = ?, payment_option = ?, payment_method = ?, card_type = ?
-        WHERE id = ?
-    ''', (name, email, phone, payment_option, payment_method, card_type, id))
+    c.execute('''UPDATE subscribers
+                 SET name = ?, email = ?, phone = ?, payment_option = ?, payment_method = ?, card_type = ?
+                 WHERE id = ?''',
+              (name, email, phone, payment_option, payment_method, card_type, id))
     conn.commit()
     conn.close()
-    
+
     return jsonify(success=True)
 
 @app.route('/delete_subscriber/<int:id>', methods=['DELETE'])
@@ -91,7 +111,7 @@ def delete_subscriber(id):
     c.execute('DELETE FROM subscribers WHERE id = ?', (id,))
     conn.commit()
     conn.close()
-    
+
     return jsonify(success=True)
 
 @app.route('/internacional')

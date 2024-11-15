@@ -347,10 +347,17 @@ th {
   width: 80%;
   margin: auto;
 }
+#boton-cancelar,
+#boton-guardar,
 #boton-borrar,
 #boton-editar {
   font-size: 12px;
   border-radius: 3px;
   font-size: 12px;
   padding: 8px 20px;
+  color: white;
+  font-weight: 500;
+}
+#editSubscriberForm {
+  font-size: 13px;
 }

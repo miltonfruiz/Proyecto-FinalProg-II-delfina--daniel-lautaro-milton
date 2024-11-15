@@ -89,7 +89,7 @@ function loadSubscribers() {
           <td>${subscriber.payment_method}</td>
           <td>${subscriber.card_type}</td>
           <td>
-            <button id="boton-editar" class="btn btn-primary btn-sm" onclick="editSubscriber(${subscriber.id})"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
+            <button id="boton-editar" class="btn btn-warning btn-sm" onclick="editSubscriber(${subscriber.id})"><i class="fa-regular fa-pen-to-square"></i> Editar</button>
             <button id="boton-borrar" class="btn btn-danger btn-sm" onclick="deleteSubscriber(${subscriber.id})"><i class="fa-solid fa-trash"></i> Borrar</button>
           </td>
         `;
@@ -98,8 +98,87 @@ function loadSubscribers() {
     })
     .catch((error) => console.error("Error cargando los suscriptores:", error));
 }
+
 function editSubscriber(id) {
-  alert(`Editar suscriptor con ID: ${id}`);
+  fetch(`/get_subscribers`)
+    .then((response) => response.json())
+    .then((data) => {
+      const subscriber = data.find((sub) => sub.id === id);
+      if (subscriber) {
+        document.getElementById("editName").value = subscriber.name;
+        document.getElementById("editEmail").value = subscriber.email;
+        document.getElementById("editPhone").value = subscriber.phone;
+        document.getElementById("editPaymentOption").value =
+          subscriber.payment_option;
+        document.getElementById("editPaymentMethod").value =
+          subscriber.payment_method;
+        document.getElementById("editCardType").value = subscriber.card_type;
+        const cardTypeContainer = document.getElementById("cardTypeContainer");
+        if (subscriber.payment_method === "tarjeta") {
+          cardTypeContainer.style.display = "block";
+        } else {
+          cardTypeContainer.style.display = "none";
+        }
+        const modal = new bootstrap.Modal(
+          document.getElementById("editSubscriberModal")
+        );
+        modal.show();
+        document.getElementById("editSubscriberForm").onsubmit = function (
+          event
+        ) {
+          event.preventDefault();
+
+          const updatedSubscriber = {
+            name: document.getElementById("editName").value,
+            email: document.getElementById("editEmail").value,
+            phone: document.getElementById("editPhone").value,
+            paymentOption: document.getElementById("editPaymentOption").value,
+            paymentMethod: document.getElementById("editPaymentMethod").value,
+            cardType: document.getElementById("editCardType").value,
+          };
+
+          fetch(`/edit_subscriber/${id}`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(updatedSubscriber),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.success) {
+                alert("Suscriptor actualizado correctamente.");
+                updateSubscriberRow(id, updatedSubscriber);
+                const modal = bootstrap.Modal.getInstance(
+                  document.getElementById("editSubscriberModal")
+                );
+                modal.hide();
+              } else {
+                alert("Error al actualizar el suscriptor.");
+              }
+            })
+            .catch((error) => {
+              console.error("Error actualizando el suscriptor:", error);
+              alert("Hubo un error al actualizar los datos.");
+            });
+        };
+      }
+    });
+}
+
+function updateSubscriberRow(id, updatedSubscriber) {
+  const rows = document.getElementById("subscribersTableBody").rows;
+  for (let row of rows) {
+    if (row.cells[0].textContent == id) {
+      row.cells[1].textContent = updatedSubscriber.name;
+      row.cells[2].textContent = updatedSubscriber.email;
+      row.cells[3].textContent = updatedSubscriber.phone;
+      row.cells[4].textContent = updatedSubscriber.paymentOption;
+      row.cells[5].textContent = updatedSubscriber.paymentMethod;
+      row.cells[6].textContent = updatedSubscriber.cardType;
+      break;
+    }
+  }
 }
 
 function deleteSubscriber(id) {
